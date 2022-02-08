@@ -1,0 +1,8 @@
+baseURL = "https://pgug.de/"
+languageCode = "en-us"
+title = "German PostgreSQL User Group"
+disableHugoGeneratorInject = true
+
+
+[markup.goldmark.renderer]
+unsafe = true
