@@ -5,6 +5,22 @@ Content for pgug.de
 
 ## Usage
 
-Run `make server` to start the Hugo server.
+We are using [HUGO](https://gohugo.io/) for building the website. A Quickstart guide can be found [here](https://gohugo.io/getting-started/quick-start/).
 
-Run `make commit` to commit all changes into git.
+To bring up a local server for testing, run this in the top level directory of the git repository:
+
+```
+$ make server
+```
+The webserver will be listening on: http://localhost:1313/
+
+
+To commmit your changes run:
+
+```
+$ `make commit`
+```
+
+### Theme
+
+https://themes.gohugo.io/themes/hugo-tikva/
