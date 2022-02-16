@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://pgug.de/</loc>
+    <lastmod>2018-11-04T21:52:00+01:00</lastmod>
+  </url><url>
+    <loc>https://pgug.de/feedback/</loc>
+    <lastmod>2018-11-04T21:52:00+01:00</lastmod>
+  </url><url>
+    <loc>https://pgug.de/about/</loc>
+  </url><url>
+    <loc>https://pgug.de/categories/</loc>
+  </url><url>
+    <loc>https://pgug.de/community/</loc>
+  </url><url>
+    <loc>https://pgug.de/events/</loc>
+  </url><url>
+    <loc>https://pgug.de/sections/</loc>
+  </url><url>
+    <loc>https://pgug.de/series/</loc>
+  </url><url>
+    <loc>https://pgug.de/tags/</loc>
+  </url>
+</urlset>
