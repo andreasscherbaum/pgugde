@@ -5,6 +5,10 @@
     <link>https://pgug.de/tags/</link>
     <description>Recent content in Tags on German PostgreSQL User Group</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language><atom:link href="https://pgug.de/tags/index.xml" rel="self" type="application/rss+xml" />
+    <language>en-us</language>
+    
+	<atom:link href="https://pgug.de/tags/index.xml" rel="self" type="application/rss+xml" />
+    
+    
   </channel>
 </rss>
