@@ -1,0 +1,105 @@
+
+
+{{/*  default lt, left/top */}}
+{{- $headerContainerClass := " fixed-top " -}}
+{{- $headerBoxClassTitle := " d-flex justify-content-start " -}}
+{{- $headerBoxClassSubtitle := " d-flex justify-content-start " -}}
+
+{{- if (eq .Site.Params.Theme.Header.OverlayAlignment "mt") -}}
+    {{- $headerContainerClass = " fixed-top " -}}
+    {{- $headerBoxClassTitle = " d-flex justify-content-center " -}}
+    {{- $headerBoxClassSubtitle = " d-flex justify-content-center " -}}
+{{- else if (eq .Site.Params.Theme.Header.OverlayAlignment "rt") -}}
+    {{- $headerContainerClass = " fixed-top " -}}
+    {{- $headerBoxClassTitle = " d-flex justify-content-end " -}}
+    {{- $headerBoxClassSubtitle = " d-flex justify-content-end " -}}
+{{- else if (eq .Site.Params.Theme.Header.OverlayAlignment "lb") -}}
+    {{- $headerContainerClass = " fixed-bottom " -}}
+    {{- $headerBoxClassTitle = " d-flex justify-content-start " -}}
+    {{- $headerBoxClassSubtitle = " d-flex justify-content-start " -}}
+{{- else if (eq .Site.Params.Theme.Header.OverlayAlignment "mb") -}}
+    {{- $headerContainerClass = " fixed-bottom " -}}
+    {{- $headerBoxClassTitle = " d-flex justify-content-center " -}}
+    {{- $headerBoxClassSubtitle = " d-flex justify-content-center " -}}
+{{- else if (eq .Site.Params.Theme.Header.OverlayAlignment "rt") -}}
+    {{- $headerContainerClass = " fixed-bottom " -}}
+    {{- $headerBoxClassTitle = " d-flex justify-content-end " -}}
+    {{- $headerBoxClassSubtitle = " d-flex justify-content-end " -}}
+{{- end -}}
+
+<div id="header" role="banner" style="{{- if .Site.Params.Theme.Header.BackgroundColor -}}background-color: 
+{{ .Site.Params.Theme.Header.BackgroundColor }};{{- end -}}
+{{ if .Site.Params.Theme.Header.FontColor }}color: {{  .Site.Params.Theme.Header.FontColor }};{{- end -}}">
+
+    <div class="container">
+        <header class="masthead">
+            <div>
+                <div id="site-header-container-above" class="row align-items-center">
+                    {{ if or (not .Site.Params.Theme.Header.TitleOnImage) (not .Site.Params.Theme.Header.Image) }}
+                        <div class="col">
+                            {{ if .Site.Params.Theme.Header.DisplayHeaderText }}
+                                <h1 id="site-header-text"><a class="header-url" style="{{ if .Site.Params.Theme.Header.FontColorTitle }}color: {{ .Site.Params.Theme.Header.FontColorTitle }};{{ end }}" href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a></h1>
+                                {{ if .Site.Params.Subtitle }}<h2 class="azbalac-subtitle-above" id="site-description" style="{{ if .Site.Params.Theme.Header.FontColorSubtitle }}color: {{ .Site.Params.Theme.Header.FontColorSubtitle }};{{ end }}">{{ .Site.Params.Subtitle }}</h2>{{ end }}
+                            {{ else }}
+                                &nbsp;
+                            {{ end }} 
+                        </div>
+                        
+                    {{ end }}
+                </div>
+            </div>
+
+
+            
+
+            <div id="site-header-above">
+                {{- if .Site.Params.Theme.Header.Image -}}<a href="{{ .Site.BaseURL }}" rel="home">
+                <picture>
+                        <source media="(min-width: 1200px)" srcset="{{ .Site.BaseURL }}{{ .Site.Params.Theme.Header.Image }} 1110w">
+                        <source media="(min-width: 992px) and (max-width: 1199.98px)" srcset="{{ .Site.BaseURL }}{{ .Site.Params.Theme.Header.Image }} 930w">
+                        <source media="(min-width: 768px) and (max-width: 991.98px)" srcset="{{ .Site.BaseURL }}{{ .Site.Params.Theme.Header.Image }} 690w">
+                        <source media="(min-width: 576px) and (max-width: 767.98px)" srcset="{{ .Site.BaseURL }}{{ .Site.Params.Theme.Header.Image }} 510w">
+                        <source media="(max-width: 575.98px)" srcset="{{ .Site.BaseURL }}{{ .Site.Params.Theme.Header.Image }} 476w">
+                        <img id="site-header-image" src="{{ .Site.BaseURL }}{{ .Site.Params.Theme.Header.Image }}" style="max-width: 100%; width: 100%">
+                </picture>
+                </a>{{- end -}}
+
+                {{ if and .Site.Params.Theme.Header.TitleOnImage .Site.Params.Theme.Header.DisplayHeaderText }}
+
+                <div id="site-header-container-overlay" class="position-absolute {{ $headerContainerClass }}">
+                    <div id="site-header-box-title" class="{{ $headerBoxClassTitle }}">
+                        <h1 class="azbalac-title" id="site-header-text"><a class="header-url" style="{{ if .Site.Params.Theme.Header.FontColorTitle }}color: {{ .Site.Params.Theme.Header.FontColorTitle }};{{ end }}" href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a></h1>
+                    </div>
+                    {{ if .Site.Params.Subtitle }}
+                    <div id="site-header-box-subtitle" class="{{ $headerBoxClassSubtitle }}">   
+                        <h2 class="azbalac-subtitle" id="site-description" style="{{ if .Site.Params.Theme.Header.FontColorSubtitle }}color: {{ .Site.Params.Theme.Header.FontColorSubtitle }};{{ end }}">{{ .Site.Params.Subtitle }}</h2>
+                    </div>{{ end }}
+                </div>
+                {{ end }}
+             
+            </div>
+
+    {{ if .Site.Menus.main }}
+    <nav id="navbarMain" class="navbar navbar-expand-sm justify-content-between mb-3 {{ .Site.Params.Navbar.ColorScheme }} {{ .Site.Params.Navbar.BgScheme }}" {{ if .Site.Params.Navbar.BackgroundColor }}style="background-color: {{ .Site.Params.Navbar.BackgroundColor }};" {{ end }}role="navigation">
+        
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+        </button>
+      
+            
+            <div class="sticky-top navbar-collapse collapse  {{ .Site.Params.Navbar.TextAlignment }}" id="navbarSupportedContent"> 
+                <ul class="navbar-nav">
+                 {{- partial "navbar_items.html" . -}}
+               </ul>
+             
+            </div><!--/.nav-collapse -->
+        
+            
+    </nav> <!-- end navbar-->
+    {{ end }}
+
+
+
+      </header>
+    </div> <!-- /container -->
+</div><!-- /div id header with default navbar -->
