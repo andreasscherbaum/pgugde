@@ -2,48 +2,48 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>German PostgreSQL User Group</title>
-    <link>https://pgug.de/</link>
+    <link>https://test.pgug.de/</link>
     <description>Recent content on German PostgreSQL User Group</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 04 Nov 2018 21:52:00 +0100</lastBuildDate>
     
-	<atom:link href="https://pgug.de/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://test.pgug.de/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Feedback</title>
-      <link>https://pgug.de/feedback/</link>
+      <link>https://test.pgug.de/feedback/</link>
       <pubDate>Sun, 04 Nov 2018 21:52:00 +0100</pubDate>
       
-      <guid>https://pgug.de/feedback/</guid>
+      <guid>https://test.pgug.de/feedback/</guid>
       <description>  Feel free to add some senseful content here. </description>
     </item>
     
     <item>
       <title>About</title>
-      <link>https://pgug.de/about/</link>
+      <link>https://test.pgug.de/about/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://pgug.de/about/</guid>
+      <guid>https://test.pgug.de/about/</guid>
       <description> About this site.  This is some HTML content, just as example. </description>
     </item>
     
     <item>
       <title>Community</title>
-      <link>https://pgug.de/community/</link>
+      <link>https://test.pgug.de/community/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://pgug.de/community/</guid>
+      <guid>https://test.pgug.de/community/</guid>
       <description> Die PostgreSQL Community ist groß und auf vielfältige Weise vertreten: IRC  #postgresql-de #postgresql  Webbasiert  pg-forum.de  Usenet  de.comp.datenbanken.misc  Mailinglisten  PostgreSQL.org Mailinglisten PostgreSQL.org pgsql-de-allgemein PostgreSQL.de Mailingliste   </description>
     </item>
     
     <item>
       <title>Events</title>
-      <link>https://pgug.de/events/</link>
+      <link>https://test.pgug.de/events/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://pgug.de/events/</guid>
+      <guid>https://test.pgug.de/events/</guid>
       <description> Events Events in the past  </description>
     </item>
     
